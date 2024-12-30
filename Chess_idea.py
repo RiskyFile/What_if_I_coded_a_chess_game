@@ -1,4 +1,4 @@
-random commitment
+
 #TODO: involve stockfish
 #TODO: find way to visualize the board in external application
 #TODO: weird bug that after queen check in fools mate game, all pieces in white position get shuffled
