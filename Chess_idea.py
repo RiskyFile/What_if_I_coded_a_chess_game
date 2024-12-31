@@ -241,11 +241,14 @@ class ChessGame:
         if piece_type in ['O-O', 'O-O-O']:
             if color == "White" and piece_type == 'O-O':
                 if self.castle_rights_dic['wK'] or self.castle_rights_dic['wR_2']:
+                    self.turn -= 1
                     return print("No castle rights")
                 for square in [[6, 1], [7, 1]]:
                     if square in enemy_scope:
+                        self.turn -= 1
                         return print("Not allowed to castle through enemy scope")
                     if square in list(friendly_position.values()):
+                        self.turn -= 1
                         return print("Self destructing back rank?")
                 # move valid
                 friendly_position_updated = friendly_position
@@ -255,11 +258,14 @@ class ChessGame:
                 print(f"Move: {game_move}   White castles king side")
             if color == "White" and piece_type == 'O-O-O':
                 if self.castle_rights_dic['wK'] or self.castle_rights_dic['wR_1']:
+                    self.turn -= 1
                     return print("No castle rights")
                 for square in [[4, 1], [3, 1], [2, 1]]:
                     if square in enemy_scope:
+                        self.turn -= 1
                         return print("Not allowed to castle through enemy scope")
                     if square in list(friendly_position.values()):
+                        self.turn -= 1
                         return print("Self destructing back rank?")
                 #move valid
                 friendly_position_updated = friendly_position
@@ -269,11 +275,14 @@ class ChessGame:
                 print(f"Move: {game_move}   White castles queen side")
             if color == 'Black' and piece_type == 'O-O':
                 if self.castle_rights_dic['bK'] or self.castle_rights_dic['bR_2']:
+                    self.turn -= 1
                     return print("No castle rights")
                 for square in [[6, 8], [7, 8]]:
                     if square in enemy_scope:
+                        self.turn -= 1
                         return print("Not allowed to castle through enemy scope")
                     if square in list(friendly_position.values()):
+                        self.turn -= 1
                         return print("Self destructing back rank?")
                 #move valid
                 friendly_position_updated = friendly_position
@@ -283,11 +292,14 @@ class ChessGame:
                 print(f"Move: {game_move}   Black castles king side")
             if color == 'Black' and piece_type == 'O-O-O':
                 if self.castle_rights_dic['bK'] or self.castle_rights_dic['bR_1']:
+                    self.turn -= 1
                     return print("No castle rights")
                 for square in [[4, 8], [3, 8], [2, 8]]:
                     if square in enemy_scope:
+                        self.turn -= 1
                         return print("Not allowed to castle through enemy scope")
                     if square in list(friendly_position.values()):
+                        self.turn -= 1
                         return print("Self destructing back rank?")
                 friendly_position_updated = friendly_position
                 friendly_position_updated['bK'] = [3, 8]
