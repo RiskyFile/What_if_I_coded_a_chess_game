@@ -1,14 +1,11 @@
 
-#TODO: involve stockfish
+#TODO: involve stockfish (mainly written in C++)
 #TODO: find way to visualize the board in external application
-#TODO: weird bug that after queen check in fools mate game, all pieces in white position get shuffled
-#TODO: make sure every return statement is accompanied by turn reduction
+#TODO: weird bug that after check mate in fools mate game, all pieces in white position get shuffled
+
 
 import Chess_board_pieces as chessps
 import Chess_functions as chessf
-
-
-
 
 
 
