@@ -2,7 +2,7 @@
 #TODO: involve stockfish
 #TODO: find way to visualize the board in external application
 #TODO: weird bug that after queen check in fools mate game, all pieces in white position get shuffled
-#TODO: add castling
+#TODO: make sure every return statement is accompanied by turn reduction
 
 import Chess_board_pieces as chessps
 import Chess_functions as chessf
